@@ -1,5 +1,5 @@
 "use client";
-import { RangsLogo } from "@/components/icons/RangsLoso";
+import { RangsLogo } from "@/components/icons/RangsLogo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";

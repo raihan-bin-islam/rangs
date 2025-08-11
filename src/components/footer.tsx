@@ -1,110 +1,143 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { ContactFormCard } from "@/components/atoms/contact-us";
+import { FacebookLogo } from "@/components/icons/FacebookLogo";
+import { RangsLogoFooter } from "@/components/icons/RangsLogoFooter";
+import { Shop } from "iconsax-reactjs";
+import { ArrowRight, Copyright, Facebook, Globe, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import type React from "react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">RGC</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              RGC Group is one of the leading electronics companies in Bangladesh. We have been serving the people of Bangladesh
-              since 1984 with quality products and excellent customer service.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-red-500" />
-                <span className="text-gray-300">Dhaka, Bangladesh</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-red-500" />
-                <span className="text-gray-300">+880-2-8833041</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-red-500" />
-                <span className="text-gray-300">info@rgc.com.bd</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold mb-6">Contact us</h4>
+    <footer className="bg-[#25272C] text-white/90">
+      <div className="max-w-8xl mx-auto px-6 py-14 lg:py-20 lg:px-20">
+        <div className="flex gap-10">
+          {/* Brand */}
+          <div className="space-y-6">
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <Input placeholder="First Name" className="bg-gray-800 border-gray-700" />
-                <Input placeholder="Last Name" className="bg-gray-800 border-gray-700" />
-              </div>
-              <Input placeholder="Email" className="bg-gray-800 border-gray-700" />
-              <Input placeholder="Phone" className="bg-gray-800 border-gray-700" />
-              <Textarea placeholder="Message" className="bg-gray-800 border-gray-700 min-h-[100px]" />
-              <Button className="bg-red-600 hover:bg-red-700 w-full">Send Message</Button>
+              <RangsLogoFooter />
+              <p className="max-w-56 leading-relaxed">Rangs Group is one of the largest Bangladeshi industrial conglomerates.</p>
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold mb-6">Useful Links</h4>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-3">
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Our Products
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Career
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  News & Events
-                </a>
+            <div className="flex items-center gap-4">
+              <div className="size-12.5 flex items-center justify-center bg-white/5 rounded-full shrink-0">
+                <Shop className="size-6" />
               </div>
-              <div className="space-y-3">
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-                <a href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Support
+              <div>
+                <span className="text-white/60">e‑Commerce :</span>
+                <a
+                  target="_blank"
+                  href="#"
+                  className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-white/90"
+                >
+                  <span>shop.rangs.com.bd</span>
                 </a>
               </div>
             </div>
 
-            <div className="mt-8">
-              <h5 className="font-semibold mb-4">Your Mobile Number</h5>
-              <Input placeholder="Enter your mobile number" className="bg-gray-800 border-gray-700 mb-4" />
-              <Button className="bg-red-600 hover:bg-red-700 w-full mb-6">Subscribe</Button>
+            <div className="flex items-center gap-2 text-sm text-white/50">
+              <Copyright className="h-4 w-4" />
+              <span>{new Date().getFullYear()} Rangs Group Reserved</span>
             </div>
           </div>
-        </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2024 RGC Group. All rights reserved.</p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
-                <Facebook className="w-5 h-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
-                <Twitter className="w-5 h-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
-                <Linkedin className="w-5 h-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
-                <Instagram className="w-5 h-5" />
-              </Button>
+          {/* Contact us */}
+          <div className="space-y-6 grow">
+            <h3 className="text-2xl font-semibold tracking-tight">Contact us</h3>
+
+            <div className="space-y-5">
+              <ContactRow
+                icon={<Phone className="h-5 w-5" />}
+                content={
+                  <div className="space-y-1">
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <span className="font-medium">02223363551-3</span>
+                    </div>
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <span className="font-medium">09677244244</span>
+                      <span className="text-primary text-sm">(Hotline)</span>
+                      <span className="text-sm">🔥</span>
+                    </div>
+                  </div>
+                }
+              />
+
+              <ContactRow
+                icon={<Mail className="h-5 w-5" />}
+                content={
+                  <div className="space-y-1">
+                    <span className="block">info@rangs.com.bd</span>
+                    <span className="block">marketing@rangs.com.bd</span>
+                  </div>
+                }
+              />
+
+              <ContactRow
+                icon={<MapPin className="h-5 w-5" />}
+                content={
+                  <address className="not-italic leading-relaxed">
+                    <div className="font-medium">Sonartori Tower</div>
+                    <div>{"3rd, 4th, 5th, 6th, 7th, 10th, 11th & 15th Floor"}</div>
+                    <div>{"12, Sonargaon Road, Bangla Motor"}</div>
+                    <div>Dhaka-1000, Bangladesh</div>
+                  </address>
+                }
+              />
             </div>
           </div>
+
+          {/* Useful Links */}
+          <div className="space-y-6 shrink-0">
+            <h3 className="text-2xl font-semibold tracking-tight">Useful Links</h3>
+            <ul className="grid gap-3 text-white/80">
+              <li>
+                <FooterLink href="#">Our Outlets</FooterLink>
+              </li>
+              <li>
+                <FooterLink href="#">Career</FooterLink>
+              </li>
+              <li>
+                <FooterLink href="#" highlight>
+                  FAQ
+                </FooterLink>
+              </li>
+              <li>
+                <FooterLink href="#">Terms & Conditions</FooterLink>
+              </li>
+              <li>
+                <FooterLink href="#">Privacy Policy</FooterLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Form Card */}
+          <ContactFormCard />
         </div>
       </div>
     </footer>
+  );
+}
+
+function ContactRow({ icon, content }: { icon: React.ReactNode; content: React.ReactNode }) {
+  return (
+    <div className="flex items-start gap-4">
+      <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-white/5">
+        <span className="text-white/90 shrink-0">{icon}</span>
+      </div>
+      <div className="text-white/80">{content}</div>
+    </div>
+  );
+}
+
+function FooterLink({ href, children, highlight = false }: { href: string; children: React.ReactNode; highlight?: boolean }) {
+  return (
+    <Link
+      href={href}
+      className={
+        highlight
+          ? "inline-flex items-center gap-2 text-primary hover:text-primary"
+          : "inline-flex items-center gap-2 hover:text-white"
+      }
+    >
+      <span>{children}</span>
+    </Link>
   );
 }

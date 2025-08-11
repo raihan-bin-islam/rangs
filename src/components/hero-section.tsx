@@ -6,7 +6,9 @@ export function HeroSection() {
     <section className="flex items-center justify-center relative h-dvh overflow-hidden">
       <div className="absolute z-40 text-background max-w-8xl w-full mx-auto px-20">
         <div className="max-w-2xl space-y-1">
-          <Badge className="-rotate-3 rounded-full bg-yellow-200 text-primary">Let’s experience something futuristic</Badge>
+          <Badge variant="heading" className="bg-yellow-200">
+            Let’s experience something futuristic
+          </Badge>
           <h2 className="text-6xl font-bold">Country’s Best & Reliable Electronics Partner</h2>
         </div>
       </div>

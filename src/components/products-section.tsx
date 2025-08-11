@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
@@ -26,17 +27,22 @@ export function ProductsSection() {
   return (
     <section className="py-15 bg-neutral-800 text-white flex flex-col items-center justify-center gap-10">
       <div className="flex flex-col items-center justify-center gap-1">
-        <Badge className="bg-rose-50 text-primary -rotate-3">Our Products</Badge>
+        <Badge variant="heading">Our Products</Badge>
         <h2 className="text-3xl">Products that Make Life Easier</h2>
       </div>
       <div className="w-full pl-[var(--nav-left-offset)]">
-        <Carousel opts={{ align: "start" }} className="w-full" setApi={setApi}>
+        <Carousel
+          opts={{ align: "start" }}
+          className="w-full transition-all"
+          setApi={setApi}
+          plugins={[Autoplay({ delay: 5000 })]}
+        >
           <CarouselContent>
             {Array.from({ length: 8 }).map((_, index, arr) => (
               <CarouselItem
                 key={index}
                 className={cn(
-                  "group basis-1/4 2xl:basis-1/5 transition-all duration-300",
+                  "group basis-1/4 2xl:basis-1/5 transition-all duration-500",
                   index === selectedIndex && "basis-1/2 2xl:basis-1/2",
                   index === arr.length - 1 && "pr-4"
                 )}

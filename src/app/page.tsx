@@ -8,6 +8,7 @@ import { MomentsSection } from "@/components/moments-section";
 import { TeamSection } from "@/components/team-section";
 import { PartnersSection } from "@/components/partners-section";
 import { Footer } from "@/components/footer";
+import { CertificateSection } from "@/components/certificate-section";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <MomentsSection />
       <TeamSection />
       <PartnersSection />
+      <CertificateSection />
       <Footer />
     </div>
   );

@@ -7,7 +7,7 @@ export function MissionSection() {
     <section className="py-15">
       <div className="max-w-8xl mx-auto px-20 flex gap-10">
         <div className="mb-12 min-w-76">
-          <Badge className="bg-rose-50 text-primary -rotate-3">Our Goal</Badge>
+          <Badge variant="heading">Our Goal</Badge>
           <h2 className="text-3xl font-bold mb-4">{`Company's Mission, Vision and Values`}</h2>
         </div>
         <div className="grow grid md:grid-cols-3 gap-6">
