@@ -4,12 +4,14 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <section className="flex items-center justify-center relative h-dvh overflow-hidden">
-      <div className="absolute z-40 text-background max-w-8xl w-full mx-auto px-20">
+      <div className="absolute z-40 text-background max-w-8xl w-full mx-auto px-4 md:px-20">
         <div className="max-w-2xl space-y-1">
           <Badge variant="heading" className="bg-yellow-200">
-            Let’s experience something futuristic
+            {`Let's experience something futuristic`}
           </Badge>
-          <h2 className="text-6xl font-bold">Country’s Best & Reliable Electronics Partner</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
+            {`Country's Best & Reliable Electronics Partner`}
+          </h2>
         </div>
       </div>
       <div className="z-30 absolute inset-0 bg-gradient-to-r from-primary to-primary/15" />

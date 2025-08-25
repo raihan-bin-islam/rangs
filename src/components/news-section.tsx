@@ -94,24 +94,24 @@ export function NewsSection() {
   const scrollTo = (i: number) => api?.scrollTo(i);
 
   return (
-    <section className="w-full relative mx-auto flex flex-col items-center justify-center lg:py-15 py-8">
-      <div className="flex flex-col items-center justify-center gap-1">
+    <section className="w-full relative mx-auto flex flex-col items-center justify-center py-8 lg:py-15 px-4 md:px-0">
+      <div className="flex flex-col items-center justify-center gap-1 text-center">
         <Badge variant="heading">News & Events</Badge>
-        <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="text-balance text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight">
           Get to know our work insights!
         </h2>
       </div>
       {/* Dark wrapper to match the design */}
       <>
         <Carousel setApi={setApi} opts={{ align: "center", loop: true }} plugins={[Autoplay({ delay: 3500 })]} className="w-full">
-          <CarouselContent className="ml-0 lg:py-15 py-6">
+          <CarouselContent className="ml-0 py-6 lg:py-15">
             {ITEMS.map((item, idx) => {
               const isActive = idx === current;
               return (
-                <CarouselItem key={item.id} className="basis-full lg:basis-1/2 xl:basis-1/3">
-                  <Card className="relative rounded-2xl border border-border/50 bg-white shadow-lg p-0 ">
+                <CarouselItem key={item.id} className="basis-full md:basis-1/2 xl:basis-1/3">
+                  <Card className="relative rounded-2xl border border-border/50 bg-white shadow-lg p-0 mx-2">
                     <CardContent className="py-4 pl-3 pr-5">
-                      <div className="grid items-stretch gap-4 md:grid-cols-2">
+                      <div className="grid items-stretch gap-4 grid-cols-1 sm:grid-cols-2">
                         <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                           <Image
                             src={item.image || "/placeholder.svg"}
@@ -121,25 +121,25 @@ export function NewsSection() {
                             priority={isActive}
                           />
                         </div>
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-3 lg:gap-5">
                           <div className="flex items-center gap-3 text-sm text-neutral-600">
-                            <Avatar className="size-12">
+                            <Avatar className="size-10 lg:size-12">
                               <AvatarImage src={item.avatar ?? "/images/prothom-alo-logo.png"} alt="Author avatar" />
                               <AvatarFallback>AU</AvatarFallback>
                             </Avatar>
                             <div>
-                              <p>{item.date}</p>
-                              <p className="font-medium text-neutral-800">{item.author}</p>
+                              <p className="text-xs lg:text-sm">{item.date}</p>
+                              <p className="font-medium text-neutral-800 text-sm lg:text-base">{item.author}</p>
                             </div>
                           </div>
-                          <div className="space-y-4">
-                            <h3 className="text-pretty text-2xl font-bold leading-snug line-clamp-2 text-primary">
+                          <div className="space-y-3 lg:space-y-4">
+                            <h3 className="text-pretty text-lg lg:text-2xl font-bold leading-snug line-clamp-2 text-primary">
                               {item.title}
                             </h3>
-                            <p className="text-neutral-600 line-clamp-3">{item.excerpt}</p>
+                            <p className="text-neutral-600 line-clamp-3 text-sm lg:text-base">{item.excerpt}</p>
                           </div>
 
-                          <Button variant="link">
+                          <Button variant="link" className="justify-start p-0">
                             Read More
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>

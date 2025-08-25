@@ -23,7 +23,7 @@ export function ContactFormCard() {
   }
 
   return (
-    <Card className="z-50 max-w-90 w-full shrink-0 grow overflow-hidden rounded-3xl border-0 shadow-none -mt-64 px-6 pt-15 pb-8 bg-gradient-to-b from-primary from-25% to-80%  to-transparent">
+    <Card className="z-50 min-w-90 max-w-full shrink-0 grow overflow-hidden rounded-3xl border-0 shadow-none -mt-64 px-6 pt-15 pb-8 bg-gradient-to-b from-primary from-25% to-80%  to-transparent">
       <CardHeader className="p-0">
         <Badge variant="heading" className="text-center mx-auto">
           Contact Us

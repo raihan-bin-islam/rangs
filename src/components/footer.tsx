@@ -9,71 +9,73 @@ import type React from "react";
 export function Footer() {
   return (
     <footer className="bg-[#25272C] text-white/90">
-      <div className="max-w-8xl mx-auto px-6 py-14 lg:py-20 lg:px-20">
-        <div className="flex gap-10">
+      <div className="max-w-8xl mx-auto px-4 lg:px-20 py-8 lg:py-20">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           {/* Brand */}
-          <div className="space-y-6">
-            <div className="space-y-4">
+          <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
+            <div className="space-y-3 lg:space-y-4">
               <RangsLogoFooter />
-              <p className="max-w-56 leading-relaxed">Rangs Group is one of the largest Bangladeshi industrial conglomerates.</p>
+              <p className="max-w-56 mx-auto lg:mx-0 leading-relaxed text-sm lg:text-base">
+                Rangs Group is one of the largest Bangladeshi industrial conglomerates.
+              </p>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="size-12.5 flex items-center justify-center bg-white/5 rounded-full shrink-0">
-                <Shop className="size-6" />
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 lg:gap-4">
+              <div className="size-10 lg:size-12.5 flex items-center justify-center bg-white/5 rounded-full shrink-0">
+                <Shop className="size-5 lg:size-6" />
               </div>
-              <div>
-                <span className="text-white/60">e‑Commerce :</span>
+              <div className="text-center lg:text-left">
+                <span className="text-white/60 text-sm lg:text-base">e‑Commerce :</span>
                 <a
                   target="_blank"
                   href="#"
-                  className="inline-flex items-center gap-2 text-base font-medium text-white hover:text-white/90"
+                  className="inline-flex items-center gap-2 text-sm lg:text-base font-medium text-white hover:text-white/90 ml-1"
                 >
                   <span>shop.rangs.com.bd</span>
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-white/50">
-              <Copyright className="h-4 w-4" />
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-xs lg:text-sm text-white/50">
+              <Copyright className="h-3 w-3 lg:h-4 lg:w-4" />
               <span>{new Date().getFullYear()} Rangs Group Reserved</span>
             </div>
           </div>
 
           {/* Contact us */}
-          <div className="space-y-6 grow">
-            <h3 className="text-2xl font-semibold tracking-tight">Contact us</h3>
+          <div className="space-y-4 lg:space-y-6 flex-1">
+            <h3 className="text-xl lg:text-2xl font-semibold tracking-tight text-center lg:text-left">Contact us</h3>
 
-            <div className="space-y-5">
+            <div className="space-y-4 lg:space-y-5">
               <ContactRow
-                icon={<Phone className="h-5 w-5" />}
+                icon={<Phone className="h-4 w-4 lg:h-5 lg:w-5" />}
                 content={
                   <div className="space-y-1">
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <span className="font-medium">02223363551-3</span>
+                      <span className="font-medium text-sm lg:text-base">02223363551-3</span>
                     </div>
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <span className="font-medium">09677244244</span>
-                      <span className="text-primary text-sm">(Hotline)</span>
-                      <span className="text-sm">🔥</span>
+                      <span className="font-medium text-sm lg:text-base">09677244244</span>
+                      <span className="text-primary text-xs lg:text-sm">(Hotline)</span>
+                      <span className="text-xs lg:text-sm">🔥</span>
                     </div>
                   </div>
                 }
               />
 
               <ContactRow
-                icon={<Mail className="h-5 w-5" />}
+                icon={<Mail className="h-4 w-4 lg:h-5 lg:w-5" />}
                 content={
                   <div className="space-y-1">
-                    <span className="block">info@rangs.com.bd</span>
-                    <span className="block">marketing@rangs.com.bd</span>
+                    <span className="block text-sm lg:text-base">info@rangs.com.bd</span>
+                    <span className="block text-sm lg:text-base">marketing@rangs.com.bd</span>
                   </div>
                 }
               />
 
               <ContactRow
-                icon={<MapPin className="h-5 w-5" />}
+                icon={<MapPin className="h-4 w-4 lg:h-5 lg:w-5" />}
                 content={
-                  <address className="not-italic leading-relaxed">
+                  <address className="not-italic leading-relaxed text-sm lg:text-base">
                     <div className="font-medium">Sonartori Tower</div>
                     <div>{"3rd, 4th, 5th, 6th, 7th, 10th, 11th & 15th Floor"}</div>
                     <div>{"12, Sonargaon Road, Bangla Motor"}</div>
@@ -85,9 +87,9 @@ export function Footer() {
           </div>
 
           {/* Useful Links */}
-          <div className="space-y-6 shrink-0">
-            <h3 className="text-2xl font-semibold tracking-tight">Useful Links</h3>
-            <ul className="grid gap-3 text-white/80">
+          <div className="space-y-4 lg:space-y-6 shrink-0">
+            <h3 className="text-xl lg:text-2xl font-semibold tracking-tight text-center lg:text-left">Useful Links</h3>
+            <ul className="grid gap-2 lg:gap-3 text-white/80 text-center lg:text-left">
               <li>
                 <FooterLink href="#">Our Outlets</FooterLink>
               </li>
@@ -109,7 +111,9 @@ export function Footer() {
           </div>
 
           {/* Contact Form Card */}
-          <ContactFormCard />
+          <div className="w-full lg:w-auto">
+            <ContactFormCard />
+          </div>
         </div>
       </div>
     </footer>

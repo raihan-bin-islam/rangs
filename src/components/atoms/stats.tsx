@@ -62,7 +62,7 @@ export const Stats = () => {
   ];
 
   return (
-    <main className="shrink-0 flex items-center justify-center -mt-42 z-50">
+    <main className="shrink-0 flex items-center justify-center lg:-mt-42 z-50">
       <div className="relative">
         <Card className="relative mx-auto w-full max-w-md overflow-hidden rounded-lg border-none bg-white p-6 shadow-2xl">
           <ul className="">

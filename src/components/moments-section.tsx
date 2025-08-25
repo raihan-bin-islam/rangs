@@ -94,18 +94,18 @@ export function MomentsSection() {
   const scrollTo = (i: number) => api?.scrollTo(i);
 
   return (
-    <section className="w-full relative mx-auto max-w-8xl lg:px-20 px-5 flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center gap-1">
+    <section className="w-full relative mx-auto max-w-8xl py-8 lg:py-15 px-4 lg:px-20 flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-1 text-center">
         <Badge variant="heading">Our Gallery</Badge>
-        <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">Moments we live</h2>
+        <h2 className="text-balance text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight">Moments we live</h2>
       </div>
       <>
         <Carousel setApi={setApi} opts={{ align: "center", loop: true }} plugins={[Autoplay({ delay: 3500 })]} className="w-full">
-          <CarouselContent className="lg:py-10 py-6">
+          <CarouselContent className="py-6 lg:py-10 ml-0">
             {ITEMS.map((item, idx) => {
               const isActive = idx === current;
               return (
-                <CarouselItem key={item.id} className="relative basis-full lg:basis-1/2 xl:basis-1/3 aspect-video">
+                <CarouselItem key={item.id} className="relative basis-full md:basis-1/2 xl:basis-1/3 aspect-video pl-2 pr-2">
                   <div className="size-full relative rounded-xl overflow-hidden">
                     <Image
                       src={item.image || "/placeholder.svg"}
